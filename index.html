@@ -94,27 +94,33 @@
     }
 
     /* RUC-logo – ALTID fixed */
-    .RUC {
-      position: fixed;
-      bottom: 20px;   /* afstand fra bunden */
-      left: 20px;     /* afstand fra venstre */
-      width: 100px;   /* valgfri størrelse */
-      z-index: 999;   /* sørger for at den ligger øverst */
-    }
+   /* RUC-logo – ALTID fixed */
+.RUC {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  z-index: 999;
+}
 
-    form:focus-within .RUC {
-        display: none;
-      }
+/* Små skærme */
+@media (max-width: 420px) {
+  #overskrift { font-size: 1.4rem; }
+  .card { padding: 18px; }
 
-    /* Små skærme: reducer størrelse og skjul logo når man skriver */
-    @media (max-width: 420px) {
-      #overskrift { font-size: 1.4rem; }
-      .card { padding: 18px; }
-      .RUC{
-        bottom: -5px;
-        left: -5px;
-      }
-    }
+  /* Behold logoet fixed i hjørnet */
+  .RUC {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  /* Giv indholdet ekstra luft nederst,
+     så det ikke rammer logoet */
+  form {
+    margin-bottom: 120px; /* ca. logo-højde + lidt luft */
+  }
+}
+
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -164,5 +170,6 @@
   </form>
 </body>
 </html>
+
 
 
