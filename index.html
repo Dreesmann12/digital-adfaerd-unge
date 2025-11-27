@@ -102,12 +102,13 @@ form button:active {
   z-index: 999;   /* sørger for at den ligger øverst */
 }
 
-
-
     /* Små skærme: reducer størrelse */
     @media (max-width: 420px) {
       #overskrift { font-size: 1.4rem; }
       .card { padding: 18px; }
+      form:focus-within .RUC {
+  display: none;
+}
     }
   </style>
    <!-- Google tag (gtag.js) -->
@@ -135,7 +136,10 @@ form button:active {
   <div class="card">
     <div id="overskrift">Tak for dit input!</div>
     <div>
-      Du har været med i et forsøg om unges digitale adfærd, hvor vi vil se hvor tilbøjelig unge er for at trykke på links
+       Du har været med i en phishing-simulator i et forsøg om unges digitale adfærd, hvor vi undersøger hvor tilbøjelige unge er til at trykke på links.
+    </div>
+    <div>
+      Dette var altså ikke et rigtigt phishing-forsøg, men en kontrolleret simulator som en del af projektet.
     </div>
     <div>
       Vi får kun data som click-rates (antallet af dem der har klikket på linket). Vi vil også gerne høre nærmere om din oplevelse, herunder hvad du først lagde mærke til, om beskeden virkede mistænkelig, hvorfor du valgte at trykke på linket, samt om du bemærkede URL’en fra starten.
@@ -154,6 +158,7 @@ form button:active {
   </form>
 </body>
 </html>
+
 
 
 
