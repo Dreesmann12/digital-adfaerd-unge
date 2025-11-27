@@ -102,15 +102,14 @@
       z-index: 999;   /* sørger for at den ligger øverst */
     }
 
+    form:focus-within .RUC {
+        display: none;
+      }
+
     /* Små skærme: reducer størrelse og skjul logo når man skriver */
     @media (max-width: 420px) {
       #overskrift { font-size: 1.4rem; }
       .card { padding: 18px; }
-
-      /* Kun når formularen har fokus (altså når man skriver) */
-      form:focus-within .RUC {
-        display: none;
-      }
     }
   </style>
 
@@ -161,3 +160,4 @@
   </form>
 </body>
 </html>
+
