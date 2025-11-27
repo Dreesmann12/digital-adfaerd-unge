@@ -106,22 +106,35 @@
 }
 
 /* Små skærme */
+/* Små skærme */
 @media (max-width: 420px) {
   #overskrift { font-size: 1.4rem; }
   .card { padding: 18px; }
 
-  /* Behold logoet fixed i hjørnet */
-  .RUC {
-    bottom: 10px;
-    left: 10px;
+  /* Lad siden blive højere end viewport og start indhold oppefra */
+  html, body {
+    height: auto;
   }
 
-  /* Giv indholdet ekstra luft nederst,
-     så det ikke rammer logoet */
+  body {
+    display: block;           /* drop flex-centering på mobil */
+    padding: 16px 16px 140px; /* ekstra bund-plads til logoet */
+  }
+
   form {
-    margin-bottom: 130px; /* ca. logo-højde + lidt luft */
+    max-width: 100%;
+    margin-bottom: 0;         /* vi bruger nu padding på body i stedet */
+  }
+
+  .RUC {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    z-index: 999;
   }
 }
+
 
   </style>
 
@@ -172,6 +185,7 @@
   </form>
 </body>
 </html>
+
 
 
 
