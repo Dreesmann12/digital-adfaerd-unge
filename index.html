@@ -110,15 +110,18 @@
 
   /* Behold logoet fixed i hjørnet */
   .RUC {
-    bottom: 20px;
-    left: 20px;
+    bottom: 10px;
+    left: 10px;
   }
 
   /* Giv indholdet ekstra luft nederst,
      så det ikke rammer logoet */
   form {
-    margin-bottom: 120px; /* ca. logo-højde + lidt luft */
+    margin-bottom: 130px; /* ca. logo-højde + lidt luft */
   }
+
+  form:focus-within .RUC { display: none; }
+
 }
 
   </style>
@@ -170,6 +173,7 @@
   </form>
 </body>
 </html>
+
 
 
 
